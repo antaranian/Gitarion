@@ -4,9 +4,9 @@ Just spent few hours playing with Jim bot (http://github.com/iownbey/jim) . Now 
 
     ?git jquery 
     
-returns __http://github.com/jquery/jquery - jQuery JavaScript Library__
+prints in channel __http://github.com/jquery/jquery - jQuery JavaScript Library__
 
     ?git yajl @ Antaranian
     
-returns __Antaranian: http://github.com/brianmario/yajl-ruby - An extremely efficient streaming JSON parsing and encoding library. Ruby C bindings to Yajl__    
+prints in channel __Antaranian: http://github.com/brianmario/yajl-ruby - An extremely efficient streaming JSON parsing and encoding library. Ruby C bindings to Yajl__    
 
