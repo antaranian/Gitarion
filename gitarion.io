@@ -10,7 +10,7 @@ Gio := Object clone do(
     self nick := nick
     self channels := channelString split
     socket setHost(server) setPort(port) connect
-    socket lnStreamWrite("USER #{nick} #{nick} #{nick} :Was Jim" interpolate)
+    socket lnStreamWrite("USER #{nick} #{nick} #{nick} :Gitarion (Was Jim)" interpolate)
     socket lnStreamWrite("NICK #{nick}" interpolate)
     channels foreach(c, socket lnStreamWrite("JOIN #" .. c))
     socket streamReadNextChunk
@@ -55,7 +55,7 @@ Gio := Object clone do(
   )
 
   queryGit := method(sentChannel, replyTo, text,
-    searchurl := "http://github.com/api/v2/yaml/repos/search/" .. text replaceSeq(" ", "+")
+    searchurl := "http://github.com/api/v2/yaml/repos/search/" .. text replaceSeq(" ", "+") asLowercase
     url := URL with(searchurl)
     url fetch
     gitResponse := url socket readBuffer
@@ -110,4 +110,4 @@ Gaml := Object clone do(
     )
 )
 
-Gio connect("Gio", "irc.freenode.net", "linux-armenia")
+Gio connect("Gitarion", "irc.freenode.net", "linux-armenia")
